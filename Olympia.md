@@ -25,7 +25,10 @@ Create the following tables with separate [migrations](https://laravel.com/docs/
     - title (varchar, max-length: 256)
     - text (varchar, max-length: 5000)
 
-##Part2 - Create Backend:
+##Part2 - Create Console Commands:
+- create, list, delete sports via [console commands](https://laravel.com/docs/5.4/artisan)
+
+##Part3 - Create Backend:
  - create-, list-, edit-, delete ticker text entries
  - structure your DB queries with DAO's (not in the controller) and use [Eloquent ORM](https://laravel.com/docs/5.4/eloquent)
  - use [csrf protection](https://laravel.com/docs/5.4/middleware)
@@ -34,12 +37,11 @@ Create the following tables with separate [migrations](https://laravel.com/docs/
  - (optional) create [unit tests](https://laravel.com/docs/5.4/testing)
  - (optional) use [view composers](https://laravel.com/docs/5.4/views#view-composers)
 
-##Part3 - Create JSON Feeds:
+##Part4 - Create JSON Feeds:
  - create a json feed for all sports (example feed link at the top - ignore **messageType**)
  - use "/api" prefix for your routes (example: /api/{sportId})
  - create a special route for "conference text (all sports) **/api/conference**"
  - if no ticker text entry is available, the property messages corresponds to an empty array
  - (optional) create integration-, functional tests
 
-##Part4 - Create Console Commands:
-- create, list, edit, delete sports via [console commands](https://laravel.com/docs/5.4/artisan)
+
