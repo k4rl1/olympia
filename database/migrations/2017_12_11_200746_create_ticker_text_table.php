@@ -25,7 +25,6 @@ class CreateTickerTextTable extends Migration
                 ->onUpdate('no action');
 
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

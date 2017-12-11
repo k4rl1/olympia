@@ -17,7 +17,6 @@ class CreateSportsTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('name', 56);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
