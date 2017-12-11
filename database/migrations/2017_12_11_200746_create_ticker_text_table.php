@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -15,7 +16,7 @@ class CreateTickerTextTable extends Migration
     {
         Schema::create('ticker_text', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table->dateTime('time');
+            $table->string('time');
             $table->boolean('is_highlight')->default(0);
             $table->integer('sport_id')->unsigned();
             $table->string('title', 256);
