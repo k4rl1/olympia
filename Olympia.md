@@ -7,12 +7,12 @@ Create a system for managing editorial ticker text and deliver these entries via
 [Laravel Documentation](https://laravel.com/docs/5.4)
 
 ##Part1 - Create Tables:
-Create the following tables with separate migrations.
+Create the following tables with separate [migrations](https://laravel.com/docs/5.4/migrations).
 - **sport**
     - id (numeric, auto generated)
     - name (varchar, max-length: 56)
 
-        The following sports should be seeded (db:seed)
+        The following sports should be [seeded](https://laravel.com/docs/5.4/seeding)
         - conference (include all sports)
         - basketball
         - volleyball
@@ -27,10 +27,11 @@ Create the following tables with separate migrations.
 
 ##Part2 - Create Backend:
  - create-, list-, edit-, delete ticker text entries
- - use csrf protection
- - validate user input (php)
- - use "/cms" prefix for your routes
- - (optional) create unit tests
+ - structure your DB queries with DAO's (not in the controller) and use [Eloquent ORM](https://laravel.com/docs/5.4/eloquent)
+ - use [csrf protection](https://laravel.com/docs/5.4/middleware)
+ - [validate user input (php)](https://laravel.com/docs/5.4/validation)
+ - use "/cms" [prefix for your routes](https://laravel.com/docs/5.4/routing)
+ - (optional) create [unit tests](https://laravel.com/docs/5.4/testing)
  - (optional) use [view composers](https://laravel.com/docs/5.4/views#view-composers)
 
 ##Part3 - Create JSON Feeds:
@@ -41,4 +42,4 @@ Create the following tables with separate migrations.
  - (optional) create integration-, functional tests
 
 ##Part4 - Create Console Commands:
-- create, list, edit, delete sports via console commands
+- create, list, edit, delete sports via [console commands](https://laravel.com/docs/5.4/artisan)
