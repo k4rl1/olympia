@@ -5,21 +5,21 @@ namespace App\Console\Commands;
 use App\Services\Dao\SportsDao;
 use Illuminate\Console\Command;
 
-class AddSport extends Command
+class ListSports extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'sport:add {name}';
+    protected $signature = 'sport:list';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Add sport entry';
+    protected $description = 'List all sports';
 
     private $sportsDao;
 
@@ -36,6 +36,7 @@ class AddSport extends Command
      */
     public function handle()
     {
-        $this->sportsDao->add($this->argument('name'));
+        $headers = ["ID", "Name"];
+        $this->table($headers, $this->sportsDao->listSports()->toArray());
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Sports;
+use App\Services\Dao\SportsDao;
 use Illuminate\Console\Command;
 
 class DeleteSoccer extends Command
@@ -21,14 +21,12 @@ class DeleteSoccer extends Command
      */
     protected $description = 'delete sport entry';
 
-    /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    private $sportsDao;
+
+    public function __construct(SportsDao $sportsDao)
     {
         parent::__construct();
+        $this->sportsDao = $sportsDao;
     }
 
     /**
@@ -38,7 +36,6 @@ class DeleteSoccer extends Command
      */
     public function handle()
     {
-        $sport = Sports::where("name", $this->argument('name'));
-        $sport->delete();
+        $this->sportsDao->delete($this->argument("name"));
     }
 }
