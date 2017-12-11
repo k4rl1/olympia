@@ -21,7 +21,7 @@ class CreateTickerTextTable extends Migration
             $table->string('title', 256);
             $table->string('text', 5000);
 
-            $table->foreign('sport_id', 'fk_ticker_text_has_sport')->references('id')->on('sports')->onDelete('no action')
+            $table->foreign('sport_id', 'fk_ticker_text_has_sport')->references('id')->on('sports')->onDelete('cascade')
                 ->onUpdate('no action');
 
             $table->timestamps();
