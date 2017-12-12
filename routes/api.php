@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(["prefix" => "tickertext"], function () {
+    Route::get('/conference', '\App\Http\Controllers\Api\TickerTextController@conference');
+    Route::get('/{sportId}', '\App\Http\Controllers\Api\TickerTextController@get');
 });

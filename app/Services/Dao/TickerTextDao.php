@@ -15,4 +15,14 @@ class TickerTextDao
     {
         return TickerText::paginate(2);
     }
+
+    public function all()
+    {
+        return TickerText::all();
+    }
+
+    public function getFor($sportId)
+    {
+        return TickerText::where('sport_id', $sportId)->orderBy("created_at")->get();
+    }
 }

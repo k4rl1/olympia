@@ -21,4 +21,14 @@ class SportsDao
     {
         return Sports::orderBy("id")->get(["id", "name"]);
     }
+
+    public function find($sportId)
+    {
+        return Sports::where("id", $sportId)->first();
+    }
+
+    public function findByName($name)
+    {
+        return Sports::where("name", $name)->first();
+    }
 }
