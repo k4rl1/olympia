@@ -29,7 +29,7 @@ Create the following tables with separate [migrations](https://laravel.com/docs/
 - create, list, delete sports via [console commands](https://laravel.com/docs/5.4/artisan)
 
 ##Part3 - Create Backend:
- - create-, list-, edit-, delete ticker text entries
+ - create-, list-, edit(optional), delete(optional) ticker text entries
  - structure your DB queries with DAO's (not in the controller) and use [Eloquent ORM](https://laravel.com/docs/5.4/eloquent)
  - use [csrf protection](https://laravel.com/docs/5.4/middleware)
  - [validate user input (php)](https://laravel.com/docs/5.4/validation)
