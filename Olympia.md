@@ -2,6 +2,8 @@
 
 Create a system for managing editorial ticker text and deliver these entries via a JSON API.
 
+Confluence Doku Homestead: https://confluence.sportradar.ag/pages/viewpage.action?spaceKey=DiS&title=Custom+Vagrant-Box+einrichten
+
 [Example Feed-Link](http://liveticker.laola1.at/olympia/json/tickertxt_all.json)
 
 [Laravel Documentation](https://laravel.com/docs/5.4)
